@@ -6,10 +6,21 @@
 <title>Para mamá, Sthepanie ❤️</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#ead8d2;color:#553d3b;font-family:Georgia,'Times New Roman',serif;background-image:radial-gradient(circle at 12% 18%,#ffffff55 0 2px,transparent 3px),radial-gradient(circle at 88% 72%,#b77a7a22 0 3px,transparent 4px),linear-gradient(135deg,#f8eee9,#ead8d2 55%,#f6e8e4)}
-.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 14px;overflow:hidden}
-.card{width:min(460px,100%);background:#fffaf7;border-radius:28px;box-shadow:0 18px 60px #5b3b3330;overflow:hidden;position:relative}
-.hero{padding:44px 28px 34px;text-align:center;background:radial-gradient(circle at 15% 20%,#ffffff99 0 2px,transparent 3px),radial-gradient(circle at 84% 25%,#d98b9a55 0 4px,transparent 5px),linear-gradient(145deg,#fff8f4,#f8e0dc);position:relative;overflow:hidden}.hero:before,.hero:after{position:absolute;content:'♡  ✦  ♡';font-size:34px;letter-spacing:18px;color:#c27b85;opacity:.22;transform:rotate(-12deg);pointer-events:none}.hero:before{left:-18px;top:24px}.hero:after{right:-28px;bottom:22px;transform:rotate(12deg)}
+body{margin:0;background:#eadbd5;color:#553d3b;font-family:Georgia,'Times New Roman',serif;position:relative;overflow-x:hidden}
+body:before,body:after{content:'';position:fixed;z-index:-1;pointer-events:none;width:260px;height:260px;border-radius:50%;opacity:.55}
+body:before{left:-120px;top:8%;background:radial-gradient(circle,#f7cfd5 0 3%,transparent 4% 14%,#f2d9d3 15% 16%,transparent 17% 29%,#f8e8df 30% 31%,transparent 32%)}
+body:after{right:-120px;bottom:5%;background:radial-gradient(circle,#f4cbd3 0 3%,transparent 4% 14%,#f1d8d1 15% 16%,transparent 17% 29%,#f8e8df 30% 31%,transparent 32%)}
+.page{position:relative}
+.page:before,.page:after{content:'♡';position:fixed;pointer-events:none;z-index:0;color:#c9828d;font-family:Georgia,serif;font-size:70px;opacity:.22}
+.page:before{left:2vw;top:14vh;transform:rotate(-14deg)}
+.page:after{right:2vw;bottom:12vh;transform:rotate(14deg)}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 14px}
+.card{width:min(460px,100%);background:#fffaf7;border-radius:28px;box-shadow:0 14px 50px #5b3b3330;overflow:hidden;position:relative;border:1px solid #ead4ce}
+.card:before{content:'✦  ♡  ✦';position:absolute;top:9px;left:0;right:0;text-align:center;color:#c98a91;font-size:13px;letter-spacing:8px;opacity:.42;pointer-events:none}
+.card:after{content:'❀';position:absolute;right:13px;top:13px;color:#c98a91;font-size:22px;opacity:.34;pointer-events:none}
+.hero{padding:50px 28px 34px;text-align:center;background:linear-gradient(145deg,#fff8f4,#f8e6e1);position:relative;overflow:hidden}
+.hero:before{content:'❀';position:absolute;left:17px;top:17px;font-size:30px;color:#c9828d;opacity:.28;transform:rotate(-15deg)}
+.hero:after{content:'❀';position:absolute;right:18px;bottom:15px;font-size:28px;color:#c9828d;opacity:.25;transform:rotate(15deg)}
 .small{font:600 12px/1.4 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;opacity:.65}
 h1{font-size:34px;font-weight:normal;margin:12px 0 8px}
 h2{font-size:25px;font-weight:normal;line-height:1.18;margin:0 0 10px}.birthday-title{text-align:center}
@@ -19,42 +30,45 @@ p{font-size:17px;line-height:1.55;margin:8px 0}
 button{border:0;border-radius:999px;background:#9c5f67;color:white;padding:13px 24px;font-size:16px;cursor:pointer;margin-top:18px}
 .hidden{display:none}
 .story-mode .story-step{display:none}
-.story-mode{height:100%}.story-mode .story-step.active{display:flex;flex-direction:column;justify-content:center;animation:fadeIn .45s ease}
+.story-mode .story-step.active{display:block;animation:fadeIn .45s ease}
 .story-hint{text-align:center;font:12px Arial,sans-serif;opacity:.55;margin:4px 0 18px}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.section{padding:22px 20px;z-index:1}.story-step{min-height:0;height:calc(100vh - 86px);overflow:hidden;position:relative;background:radial-gradient(circle at 8% 12%,#d28b9422 0 3px,transparent 4px),radial-gradient(circle at 92% 88%,#d28b9422 0 3px,transparent 4px)}.story-step:before,.story-step:after{position:absolute;content:'♡';font-family:Georgia,serif;color:#c47d87;opacity:.20;font-size:44px;pointer-events:none}.story-step:before{left:4px;top:28px;transform:rotate(-18deg)}.story-step:after{right:6px;bottom:24px;transform:rotate(18deg)}.story-step.active{overflow:hidden}
-.photo{width:100%;height:auto;max-height:46vh;display:block;object-fit:contain;object-position:center;border-radius:18px;margin:10px auto;box-shadow:0 7px 24px #5b3b3320;background:#f3e9e5}
+.section{padding:22px 20px;position:relative;background:linear-gradient(180deg,#fffaf7 0%,#fffaf7 86%,#fdf0eb 100%)}
+.story-step{min-height:0;position:relative}
+.story-step.active{overflow:hidden}
+.story-step:before{content:'❀';position:absolute;left:4px;top:2px;color:#d18e96;font-size:25px;opacity:.22;transform:rotate(-18deg);pointer-events:none}
+.story-step:after{content:'♡';position:absolute;right:6px;bottom:5px;color:#d18e96;font-size:42px;opacity:.20;transform:rotate(15deg);pointer-events:none}
+.section > *{position:relative;z-index:1}
+.photo{width:100%;height:clamp(230px,38vh,360px);display:block;object-fit:contain;object-position:center;border-radius:18px;margin:12px auto;box-shadow:0 7px 24px #5b3b3320;background:#f3e9e5}
 .caption{text-align:center;font-style:italic;color:#7c5d59}
-.note{background:linear-gradient(145deg,#fff1ed,#f9e3de);border:1px solid #d9aaa633;border-radius:20px;padding:18px;margin:16px 0;box-shadow:0 8px 24px #7b51421a;position:relative;z-index:1}.note:before{content:'♥';position:absolute;right:16px;top:10px;color:#d77886;opacity:.45}
+.note{background:linear-gradient(145deg,#fff1ec,#f8e2dd);border:1px solid #ebd0ca;border-radius:20px;padding:18px;margin:16px 0;box-shadow:0 7px 20px #8f5e5a14;position:relative}.note:after{content:'♥';position:absolute;right:14px;bottom:8px;color:#c9828d;font-size:18px;opacity:.35}
 .names{font-family:Arial,sans-serif;font-weight:700;letter-spacing:.4px}
 .video{width:100%;border-radius:18px;background:#111;margin:14px 0}
-.music{background:linear-gradient(145deg,#fff1ed,#f8e1dc);border:1px solid #d9aaa633;border-radius:22px;padding:18px;margin:16px 0;text-align:center;box-shadow:0 10px 30px #7b51421a;position:relative;z-index:1}.music:after{content:'♪  ♡  ♪';display:block;margin-top:8px;color:#b7838d;opacity:.45;letter-spacing:10px}
+.music{background:linear-gradient(145deg,#fff1ec,#f8e0dc);border:1px solid #ebcbc5;border-radius:22px;padding:20px;margin:16px 0;text-align:center;box-shadow:0 8px 24px #8f5e5a18;position:relative;overflow:hidden}.music:after{content:'♪  ♡  ♪';position:absolute;right:12px;top:8px;color:#b87580;font-size:18px;opacity:.28}
 .music audio{width:100%;margin-top:10px}
 .divider{text-align:center;font-size:24px;opacity:.5;margin:6px 0}
-.final{text-align:center;padding:34px 24px 42px;background:radial-gradient(circle at 12% 18%,#ffffff88 0 2px,transparent 3px),radial-gradient(circle at 88% 82%,#d98b9a33 0 4px,transparent 5px),linear-gradient(145deg,#f9e5e1,#fff8f4);position:relative}.final:before,.final:after{content:'♡';position:absolute;color:#c27b85;opacity:.2;font-size:52px}.final:before{left:16px;top:26px;transform:rotate(-15deg)}.final:after{right:16px;bottom:24px;transform:rotate(15deg)}
+.final{text-align:center;padding:34px 24px 42px;background:linear-gradient(145deg,#f7dfda,#fff8f4);position:relative;overflow:hidden}.final:before{content:'❀  ♡  ❀';position:absolute;left:0;right:0;top:10px;color:#c9828d;font-size:18px;letter-spacing:10px;opacity:.28}.final:after{content:'♡';position:absolute;right:18px;bottom:15px;color:#c9828d;font-size:52px;opacity:.20;transform:rotate(15deg)}
 .footer{font:12px Arial,sans-serif;opacity:.5;text-align:center;margin-top:20px}
 @media (max-width:520px){
-  body{overflow:hidden}
-  .page{height:100dvh;min-height:100dvh;padding:0;align-items:stretch;overflow:hidden}
-  .card{width:100%;height:100dvh;min-height:100dvh;border-radius:0;display:flex;flex-direction:column}
-  .hero{height:100dvh;min-height:100dvh;display:flex;flex-direction:column;justify-content:center;padding:24px 18px}
+  .page{padding:10px 6px;align-items:flex-start}
+  body{background:#e9d9d3}
+  .page:before{left:-18px;top:16vh;font-size:62px}
+  .page:after{right:-14px;bottom:10vh;font-size:62px}
+  .card{width:100%;border-radius:24px}
+  .hero{padding:34px 18px 28px}
   h1{font-size:32px}
-  h2{font-size:23px}
-  p{font-size:15px;line-height:1.4}
-  #gift{height:100dvh;min-height:100dvh;overflow:hidden;display:flex;flex-direction:column}
-  .story-hint{flex:0 0 auto;margin:7px 0 4px;font-size:10px}
-  .story-step{height:calc(100dvh - 26px);min-height:0;max-height:calc(100dvh - 26px);padding:12px 15px;overflow:hidden;justify-content:center}
-  .story-step.active{display:flex}
-  .photo{width:100%;height:auto;max-height:42dvh;margin:7px auto;object-fit:contain}
-  .birthday-title{font-size:22px;line-height:1.12;margin-bottom:6px}
-  .caption{font-size:14px;line-height:1.3}
-  .note{padding:10px;margin:8px 0}
-  .note p{margin:4px 0}
-  .music{padding:12px;margin:4px 0}
-  .music h2{margin-bottom:4px}
-  .music audio{margin-top:6px}
-  .video{max-height:62dvh;height:auto;object-fit:contain;margin:8px 0}
-  .final{height:calc(100dvh - 26px);padding:20px 18px}
+  .section{padding:18px 16px}
+  .story-hint{margin:3px 0 10px;font-size:11px}
+  .photo{height:clamp(220px,38vh,330px);margin:10px auto}
+  .caption{font-size:16px;line-height:1.45}
+  .note{padding:14px;margin:12px 0}
+  .music{padding:16px;margin:8px 0}
+  .final{padding:28px 18px 34px}
+}
+@media (max-width:520px) and (max-height:760px){
+  .photo{height:230px}
+  p{font-size:16px;line-height:1.45}
+  .section{padding:14px 15px}
 }
 </style>
 </head>
@@ -155,7 +169,8 @@ function openGift(){
   function showStep(index){
     current=Math.max(0,Math.min(index,steps.length-1));
     steps.forEach((step,i)=>step.classList.toggle('active',i===current));
-    steps[current].scrollIntoView({behavior:'auto',block:'nearest'});
+    gift.scrollIntoView({behavior:'smooth',block:'start'});
+    window.scrollTo({top:Math.max(0,gift.offsetTop-12),behavior:'smooth'});
   }
 
   function nextStep(){
