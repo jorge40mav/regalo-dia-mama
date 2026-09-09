@@ -128,7 +128,6 @@ function openGift(){
   const gift=document.getElementById('gift');
   const steps=[...document.querySelectorAll('.story-step')];
   let current=0;
-  let started=false;
 
   function showStep(index){
     current=Math.max(0,Math.min(index,steps.length-1));
@@ -146,16 +145,14 @@ function openGift(){
     }
   }
 
-  gift.addEventListener('click',function(e){
-    if(e.target.closest('button,a,input,select,textarea,audio,video,source')) return;
-    if(!started){ started=true; return; }
+  function isInteractive(target){
+    return !!target.closest('button,a,input,select,textarea,audio,video,source');
+  }
+
+  gift.addEventListener('pointerup',function(e){
+    if(isInteractive(e.target)) return;
     nextStep();
   });
-
-  gift.addEventListener('touchend',function(e){
-    if(e.target.closest('button,a,input,select,textarea,audio,video,source')) return;
-    e.preventDefault();
-  },{passive:false});
 })();
 </script>
 </body>
