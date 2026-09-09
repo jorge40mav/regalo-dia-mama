@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Para mamá, Sthepanie ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f7eee9;color:#553d3b;font-family:Georgia,'Times New Roman',serif}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 14px}
+.card{width:min(460px,100%);background:#fffaf7;border-radius:28px;box-shadow:0 14px 50px #5b3b331f;overflow:hidden}
+.hero{padding:44px 28px 34px;text-align:center;background:linear-gradient(145deg,#fff8f4,#f8e6e1)}
+.small{font:600 12px/1.4 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;opacity:.65}
+h1{font-size:34px;font-weight:normal;margin:12px 0 8px}
+h2{font-size:25px;font-weight:normal;margin:0 0 12px}
+p{font-size:17px;line-height:1.65;margin:10px 0}
+.heart{font-size:42px;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.12)}}
+button{border:0;border-radius:999px;background:#9c5f67;color:white;padding:13px 24px;font-size:16px;cursor:pointer;margin-top:18px}
+.hidden{display:none}
+.section{padding:28px 24px}
+.photo{width:100%;display:block;border-radius:18px;margin:16px 0;box-shadow:0 7px 24px #5b3b3320}
+.caption{text-align:center;font-style:italic;color:#7c5d59}
+.note{background:#fff2ee;border-radius:18px;padding:18px;margin:16px 0}
+.names{font-family:Arial,sans-serif;font-weight:700;letter-spacing:.4px}
+.video{width:100%;border-radius:18px;background:#111;margin:14px 0}
+.music{background:#fff2ee;border-radius:18px;padding:18px;margin:16px 0;text-align:center}
+.music audio{width:100%;margin-top:10px}
+.divider{text-align:center;font-size:24px;opacity:.5;margin:6px 0}
+.final{text-align:center;padding:34px 24px 42px;background:linear-gradient(145deg,#f9e5e1,#fff8f4)}
+.footer{font:12px Arial,sans-serif;opacity:.5;text-align:center;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="page">
+  <main class="card">
+    <section class="hero" id="start">
+      <div class="small">Una pequeña sorpresa para ti</div>
+      <div class="heart">❤️</div>
+      <h1>Sthepanie</h1>
+      <p>Tenemos algo preparado especialmente para ti...</p>
+      <p><em>Porque hoy queremos recordarte cuánto te queremos.</em></p>
+      <button onclick="openGift()">Abrir mi sorpresa ✨</button>
+    </section>
+
+    <div id="gift" class="hidden">
+      <section class="section">
+        <div class="small">21 de septiembre</div>
+        <h2>Hoy cumple años nuestra mamá ❤️</h2>
+        <p>Y aunque no existen regalos suficientes para agradecerte todo lo que haces por nosotros, quisimos preparar este pequeño recuerdo para ti.</p>
+        <img class="photo" src="assets/foto1.jpg" alt="Recuerdo familiar">
+        <p class="caption">Tres hijos, una mamá y miles de momentos para guardar en el corazón.</p>
+      </section>
+
+      <section class="section">
+        <div class="music">
+          <div class="divider">🎶</div>
+          <h2>Una canción para ti</h2>
+          <p><em>“Your Song” — Elton John</em></p>
+          <audio id="song" controls preload="metadata">
+            <source src="assets/your-song-elton-john.mp3" type="audio/mpeg">
+            Tu navegador no puede reproducir esta canción.
+          </audio>
+        </div>
+        <div class="divider">♡</div>
+        <h2>Gracias, mamá</h2>
+        <p>Gracias por cada abrazo, por cuidarnos, por acompañarnos y por estar presente en nuestras pequeñas y grandes aventuras.</p>
+        <img class="photo" src="assets/foto2.jpg" alt="Recuerdo con los niños">
+        <div class="note"><p>Hay cosas que quizás todavía no sabemos decir con palabras, pero sí sabemos una cosa:</p>
+        <p><strong>tenerte como mamá es uno de nuestros regalos más grandes.</strong> ❤️</p></div>
+      </section>
+
+      <section class="section">
+        <img class="photo" src="assets/foto3.jpg" alt="Recuerdo familiar">
+        <h2 style="text-align:center">Los tres mosqueteros 😄❤️</h2>
+        <p style="text-align:center">Isaac · Vicente · Gaspar</p>
+        <p>Juntos hemos compartido juegos, paseos, risas, travesuras y muchísimos recuerdos que algún día vamos a mirar y recordar con una sonrisa.</p>
+      </section>
+
+      <section class="section">
+        <h2>Un recuerdo para ti 🎥</h2>
+        <p>Queríamos que además de fotos, tuvieras un momento para volver a mirar y sentir.</p>
+        <video class="video" controls playsinline preload="metadata">
+          <source src="assets/sorpresa_celular.mp4" type="video/mp4">
+          Tu navegador no puede reproducir este video.
+        </video>
+      </section>
+
+      <section class="section">
+        <img class="photo" src="assets/foto4.jpg" alt="Recuerdo familiar">
+        <p class="caption">Los mejores recuerdos son los que se viven juntos. ❤️</p>
+      </section>
+
+      <section class="final">
+        <div class="heart">❤️</div>
+        <h2>Feliz cumpleaños, mamá</h2>
+        <p>Que nunca olvides lo importante que eres para nosotros.</p>
+        <p>Gracias por ser nuestro refugio, por tus cuidados, por tu paciencia y por todo el amor que nos entregas cada día.</p>
+        <p><strong>Te queremos muchísimo.</strong></p>
+        <p class="names">Isaac, Vicente y Gaspar</p>
+        <p>🥰❤️🎂</p>
+        <div class="footer">Hecho con mucho amor para mamá.</div>
+      </section>
+    </div>
+  </main>
+</div>
+<script>
+function openGift(){
+  document.getElementById('gift').classList.remove('hidden');
+  document.getElementById('start').scrollIntoView({behavior:'smooth'});
+  setTimeout(()=>document.getElementById('gift').scrollIntoView({behavior:'smooth'}),120);
+  const song=document.getElementById('song');
+  if(song){ song.play().catch(()=>{}); }
+}
+</script>
+</body>
+</html>
